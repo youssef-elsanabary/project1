@@ -1,0 +1,23 @@
+<div>--------------------------------------------------------</div>
+<h1>
+    <!--string interpolation  // one way data bind //cannot use equal -->
+     {{name}} / {{age}} / {{isMarried}} 
+     <br>
+     {{std.name}} / {{std.id}} / {{std.address}} / {{std.age}}
+</h1>
+<!-- prop binding /one way data bind-->
+ <input type="text" [value]="std.name"/>
+ <!-- to use colspan in prop binding 
+  write it with camelCase("colSpan") not ("colspan")
+  or use [attr.colspan]
+ -->
+  <table border="1">
+    <tr>
+        <td>{{name}}</td>
+        <td>{{std.address}}</td>
+    </tr>
+    <tr>
+        <td [colSpan]="n">{{age}}</td>
+    </tr>
+  </table>
+  <img [src]="imgSrc" [alt]="name">

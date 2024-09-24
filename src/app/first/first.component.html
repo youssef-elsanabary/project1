@@ -1,0 +1,21 @@
+<div>--------------------------------------------------</div>
+        <!-- two way data binding -->
+{{std.address}}
+<br>
+<!-- banana in the box -->
+<input type="text" [(ngModel)]="std.address"/>
+<br>
+<br>
+<br>
+<br>
+{{std.name}}
+<br>
+        <!-- #t1 is refrance for inputelment  -->
+<input #t1 type="text" [value]="std.name" (keyup)="updataName(t1.value)">
+<!-- <input #t1 type="text" (keyup)="std.name=t1.value"> -->
+<br>
+<br>
+<br>
+<br>
+<button class="btn btn-danger" (click)="show()">show</button>
+<app-second></app-second>
